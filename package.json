@@ -1,15 +1,15 @@
 {
-  "name": "HolidayPokerTournament",
+  "name": "HolidayPoker",
   "version": "0.1.0",
   "description": "Our closed beta tournament",
   "keywords": ["competition", "poker"],
-  "repository": "git://github.com/mdp/HolidayPokerTournament.git",
+  "repository": "git://github.com/mdp/HolidayPoker.git",
   "author": "Mark Percival <mark@markpercival.us> (http://markpercival.us)",
   "scripts": {
     "prepublish": "rm -rf lib && coffee --compile -o lib/ src/"
   },
   "dependencies": {
-     "MachinePoker" : ">=0.3.0"
+     "machine-poker" : ">=0.3.0"
     ,"coffee-script" : ">=1.4.0"
   },
   "engines": { "node": "0.8.x" },

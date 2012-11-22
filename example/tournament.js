@@ -1,8 +1,6 @@
 var MachinePoker = require('MachinePoker');
 var narrator = MachinePoker.observers.narrator;
-var now = new Date();
-var dateStr = now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate();
-var fileLogger = MachinePoker.observers.fileLogger('./results/results-'+ dateStr +'.json');
+var fileLogger = MachinePoker.observers.fileLogger('./results.json');
 
 var table = MachinePoker.create({
   "maxRounds" : 2,
@@ -10,6 +8,7 @@ var table = MachinePoker.create({
   "betting" : MachinePoker.betting.noLimit(10,20)
 });
 
+table.addPlayer(__dirname + "/mister_stupid.js", {debug: true});
 table.addPlayer("https://raw.github.com/gist/d2d69b3178379458d2b9/HardlyKnower.js", {name: "HardlyKnower - @farktronix"});
 table.addPlayer("https://raw.github.com/gist/affa85924b3b9ba115dd/rpj-losing_statelessly.js", {name: "Losing Statelessly - @rpj"});
 table.addPlayer("https://raw.github.com/gist/7ea74e5aca4da2265382/bot.js", {name: "Rucky Bot - @chenosaurus"});
