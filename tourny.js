@@ -1,4 +1,4 @@
-var MachinePoker = require('MachinePoker');
+var MachinePoker = require('machine-poker');
 var narrator = MachinePoker.observers.narrator;
 var now = new Date();
 var dateStr = now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate();
