@@ -1,4 +1,4 @@
-var MachinePoker = require('MachinePoker');
+var MachinePoker = require('machine-poker');
 var narrator = MachinePoker.observers.narrator;
 var fileLogger = MachinePoker.observers.fileLogger('./results.json');
 
