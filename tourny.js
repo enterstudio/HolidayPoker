@@ -5,7 +5,7 @@ var dateStr = now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate
 var fileLogger = MachinePoker.observers.fileLogger('./results/results-'+ dateStr +'.json');
 var argv = require('optimist')
     .default({
-        maxRounds : 10,
+        maxRounds : 1000,
         chips : 1000,
         blind : 10,
         raise : 20
@@ -20,8 +20,7 @@ var table = MachinePoker.create({
 });
 
 table.addPlayer(
-  "https://raw.github.com/gist/d2d69b3178379458d2b9/HardlyKnower.js",
-  {name: "HardlyKnower - @farktronix"}
+  "https://raw.github.com/gist/d2d69b3178379458d2b9/HardlyKnower.js"
 );
 table.addPlayer(
   "https://raw.github.com/gist/affa85924b3b9ba115dd/rpj-losing_statelessly.js",
@@ -34,6 +33,17 @@ table.addPlayer(
 table.addPlayer(
   "https://raw.github.com/gist/ee24fb0ebcf00fbc9f23/jacksorbetterbot.js",
   {name: "Jacks Or Better - @kylar42"}
+);
+table.addPlayer(
+  "https://raw.github.com/gist/d31631979712637eccb8/chanian_bot.js",
+  {name: "Agro Bot - @chanian"}
+);
+table.addPlayer(
+  "https://raw.github.com/gist/987e6e7c11877c4879c0/bot.js",
+  {name: "Madanr Bot - @madanr"}
+);
+table.addPlayer(
+  "https://raw.github.com/mdp/DownToTheFelt/master/player.js"
 );
 
 // Add some observers
