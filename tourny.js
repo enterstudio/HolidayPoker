@@ -3,11 +3,20 @@ var narrator = MachinePoker.observers.narrator;
 var now = new Date();
 var dateStr = now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate();
 var fileLogger = MachinePoker.observers.fileLogger('./results/results-'+ dateStr +'.json');
+var argv = require('optimist')
+    .default({
+        maxRounds : 10,
+        chips : 1000,
+        blind : 10,
+        raise : 20
+    })
+    .argv
+;
 
 var table = MachinePoker.create({
-  "maxRounds" : 1000,
-  "chips" : 1000,
-  "betting" : MachinePoker.betting.noLimit(10,20)
+  "maxRounds" : argv.maxRounds,
+  "chips" : argv.chips,
+  "betting" : MachinePoker.betting.noLimit(argv.blind,argv.raise)
 });
 
 table.addPlayer(
