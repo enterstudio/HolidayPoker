@@ -43,7 +43,7 @@ table.addPlayer(
   {name: "Madanr Bot - @madanr"}
 );
 table.addPlayer(
-  "https://raw.github.com/mdp/DownToTheFelt/master/player.js"
+  "https://raw.github.com/mdp/DownToTheFelt/master/lib/player.min.js"
 );
 
 // Add some observers
